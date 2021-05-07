@@ -1,8 +1,49 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-sapphire: #22577aff;
+  --cadet-blue: #38a3a5ff;
+  --medium-aquamarine: #57cc99ff;
+  --light-green: #80ed99ff;
+  --tea-green: #c7f9ccff;
+}
+
+html {
+  font-size: 112.5%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--cadet-blue);
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  display: grid;
+}
+
+.header {
+  background: var(--tea-green);
+}
+
+.characterSection {
+  background: var(--medium-aquamarine);
+}
+
+.footer {
+  background: var(--tea-green);
+}
+
+h1 {
+  padding-top: 1em;
+  margin: 0;
 }
