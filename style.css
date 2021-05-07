@@ -33,6 +33,7 @@ body {
 
 .header {
   background: var(--tea-green);
+  height: 8em;
 }
 
 .characterSection {
@@ -40,7 +41,11 @@ body {
 }
 
 .footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   background: var(--tea-green);
+  height: 4em;
 }
 
 h1 {
