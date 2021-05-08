@@ -12,17 +12,17 @@ const header = createElement("header", {
     }),
     createElement("select", {
       className: "dropdown",
-      id: "test",
+      id: "dropdown-menu",
       name: "select",
       children: [
         createElement("option", {
           value: "",
           innerText: "Wähle eine Kategorie",
         }),
-        createElement("option", {
-          value: "creatures",
-          innerText: "Creatures",
-        }),
+        // createElement("option", {
+        //   value: "creatures",
+        //   innerText: "Creatures",
+        // }),
         createElement("option", {
           value: "equipment",
           innerText: "Equipment",
@@ -42,14 +42,10 @@ const header = createElement("header", {
       ],
       onchange: () => {
         removeAllChildren(characterSection);
-        const value = document.querySelector("#test").value;
-        console.log("1:", value);
+        const value = document.querySelector("#dropdown-menu").value;
         getCharacters(value).then((items) => {
-          console.log("2:", items);
           const itemElements = items.map(createCharacterElement);
-          console.log("3:", itemElements);
           characterSection.append(...itemElements);
-          console.log("4:", itemElements);
         });
       },
     }),

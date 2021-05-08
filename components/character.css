@@ -1,17 +1,22 @@
 .card {
   height: auto;
-  width: auto;
+  width: 20em;
   padding: 1em;
-  margin: 3em;
+  margin: 2em 0 0 0;
   background: var(--medium-aquamarine);
   border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card:first-child {
+  margin-top: 6em;
 }
 
 .card img {
   border: 1px solid black;
   border-radius: 2px;
 }
-
 .card p {
   margin-left: auto;
   margin-right: auto;

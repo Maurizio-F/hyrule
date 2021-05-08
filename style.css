@@ -34,21 +34,26 @@ body {
 
 .header {
   background: var(--tea-green);
-  height: 8em;
+  height: 10em;
 }
 
 .characterSection {
   background: var(--medium-aquamarine);
-  margin-bottom: 5em;
 }
 
 .footer {
+  position: fixed;
   width: 100%;
-  height: 2em;
+  bottom: 0;
   background: var(--tea-green);
 }
 
 h1 {
   padding-top: 1em;
-  margin: 0;
+}
+
+.dropdown {
+  width: 13em;
+  color: green;
+  border-radius: 5px;
 }
