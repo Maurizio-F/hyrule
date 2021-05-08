@@ -1,5 +1,19 @@
 .card {
   height: auto;
   width: auto;
-  background: black;
+  padding: 1em;
+  margin: 3em;
+  background: var(--medium-aquamarine);
+  border-radius: 4px;
+}
+
+.card img {
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.card p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 20em;
 }

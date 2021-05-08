@@ -1,13 +1,13 @@
-export async function getCharacters(category) {
+export async function getCharacters(monsters) {
   const promise = fetch(
-    `https://botw-compendium.herokuapp.com/api/v2/category/${category}`
+    `https://botw-compendium.herokuapp.com/api/v2/category/${monsters}`
   );
   const response = await promise;
   if (response.status === 404) {
     return [];
   }
   const data = await response.json();
-  return data;
+  return data.data;
 }
 
 // export async function getCharacter(charID) {

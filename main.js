@@ -1,6 +1,6 @@
 import "./style.css";
 import { getCharacters } from "./utils/api";
-import { createElement } from "./utils/elements";
+import { createElement, removeAllChildren } from "./utils/elements";
 import { createCharacterElement } from "./components/character";
 
 const header = createElement("header", {
@@ -41,13 +41,15 @@ const header = createElement("header", {
         }),
       ],
       onchange: () => {
+        removeAllChildren(characterSection);
         const value = document.querySelector("#test").value;
-        console.log(value);
+        console.log("1:", value);
         getCharacters(value).then((items) => {
-          console.log(items);
+          console.log("2:", items);
           const itemElements = items.map(createCharacterElement);
+          console.log("3:", itemElements);
           characterSection.append(...itemElements);
-          console.log(itemElements);
+          console.log("4:", itemElements);
         });
       },
     }),
