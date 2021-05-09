@@ -50,6 +50,7 @@ body {
   margin-top: 2em;
   height: 3em;
   padding-top: 0.9em;
+  z-index: 100;
 }
 
 h1 {
