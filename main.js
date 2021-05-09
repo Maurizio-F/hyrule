@@ -42,8 +42,8 @@ const header = createElement("header", {
       ],
       onchange: () => {
         removeAllChildren(characterSection);
-        const value = document.querySelector("#dropdown-menu").value;
-        getCharacters(value).then((items) => {
+        const category = document.querySelector("#dropdown-menu").value;
+        getCharacters(category).then((items) => {
           const itemElements = items.map(createCharacterElement);
           characterSection.append(...itemElements);
         });
@@ -54,11 +54,20 @@ const header = createElement("header", {
 
 const characterSection = createElement("section", {
   className: "result",
+  children: [
+    createElement("h1", {
+      innerText: "Die Zelda-Database zum Spiel Breath of the wild!",
+    }),
+    createElement("img", {
+      className: "triforce",
+      src: "./assets/triforce.png",
+    }),
+  ],
 });
 
 const footer = createElement("footer", {
   className: "footer",
-  innerText: "This is the Footer",
+  innerText: "Can Hyrule's destiny really depend on such a lazy boy?",
 });
 
 document.querySelector("#app").append(header, characterSection, footer);

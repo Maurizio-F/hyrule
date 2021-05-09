@@ -14,12 +14,11 @@
 
 html {
   font-size: 112.5%;
-  margin: 0;
 }
 
 body {
-  margin: 0;
   background: var(--cadet-blue);
+  margin: 0;
 }
 
 #app {
@@ -27,9 +26,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 10% 80% 10%;
+  height: 100%;
+  margin: 0;
 }
 
 .header {
@@ -37,23 +35,40 @@ body {
   height: 10em;
 }
 
-.characterSection {
-  background: var(--medium-aquamarine);
+.result {
+  background: var(--cadet-blue);
+  display: grid;
+  height: 90%;
+  padding-bottom: 6em;
 }
 
 .footer {
   position: fixed;
-  width: 100%;
   bottom: 0;
+  width: 100%;
   background: var(--tea-green);
+  margin-top: 2em;
+  height: 3em;
+  padding-top: 0.9em;
 }
 
 h1 {
   padding-top: 1em;
+  margin: 0;
 }
 
 .dropdown {
   width: 13em;
   color: green;
   border-radius: 5px;
+  margin-top: 2em;
+  font-size: 1em;
+}
+
+.triforce {
+  width: 30em;
+  padding-top: 3em;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 19%;
 }
