@@ -12,7 +12,6 @@ const header = createElement("header", {
     }),
     createElement("select", {
       className: "dropdown",
-      id: "dropdown-menu",
       name: "select",
       children: [
         createElement("option", {
@@ -40,9 +39,9 @@ const header = createElement("header", {
           innerText: "Treasure",
         }),
       ],
-      onchange: () => {
+      onchange: (event) => {
         removeAllChildren(characterSection);
-        const category = document.querySelector("#dropdown-menu").value;
+        const category = event.target.value;
         getCharacters(category).then((items) => {
           const itemElements = items.map(createCharacterElement);
           characterSection.append(...itemElements);
